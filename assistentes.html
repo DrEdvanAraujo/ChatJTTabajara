@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistentes - Chat-JT Simulador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="grid h-screen w-screen grid-cols-1 grid-rows-[auto,1fr] overflow-hidden text-smd md:grid-cols-[280px,1fr] transition-[300ms] [transition-property:grid-template-columns] dark:text-gray-300 md:grid-rows-[1fr]">
+	<nav class="grid max-h-screen grid-cols-1 grid-rows-[auto,1fr,auto] overflow-hidden *:w-[280px] max-md:hidden">
+            <div class="sticky top-0 flex flex-none items-center justify-between px-3 py-3.5">
+                <span class="flex items-center rounded-xl text-lg font-semibold">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1011 865" class="mr-1">
+        <!-- SVG path do logo aqui -->
+    </svg>
+    Chat-JT
+</span>
+                <button onclick="window.location.href = 'index.html'" class="my-4 flex items-center gap-2 rounded-full bg-black px-4 py-2 text-white hover:bg-gray-800">
+    <i data-lucide="message-square" class="h-4 w-4"></i>
+    Novo chat
+</button>
+            </div>
+
+            <div class="scrollbar-custom flex flex-col gap-1 overflow-y-auto rounded-r-xl from-gray-50 px-3 pb-3 pt-2 text-[.9rem] dark:from-gray-800/30">
+            </div>
+
+            <div class="mt-0.5 flex flex-col gap-1 rounded-r-xl p-3 text-sm md:bg-gradient-to-l md:from-gray-50 md:dark:from-gray-800/30">
+                <button class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                    Tema
+                </button>
+                <button id="btnAssistentes" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Assistentes
+</button>
+
+<script>
+    document.getElementById("btnAssistentes").addEventListener("click", function () {
+        window.location.href = "assistentes.html";
+    });
+</script>
+                    <button id="btnFerramentas" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Ferramentas
+    <span class="ml-auto rounded-full border border-purple-300 px-2 py-0.5 text-xs text-purple-500 dark:border-purple-500 dark:text-purple-400">
+        Novo
+    </span>
+</button>
+
+<script>
+    document.getElementById("btnFerramentas").addEventListener("click", function () {
+        window.location.href = "tools.html"; // Redireciona para a página de ferramentas
+    });
+</script>
+
+<button id="btnConfiguracoes" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Configurações
+</button>
+
+<script>
+    document.getElementById("btnConfiguracoes").addEventListener("click", function() {
+        window.location.href = "ConfigLhama.html";
+    });
+</script>
+            </div>
+        </nav>
+        <!-- Sidebar (mesmo código da página principal) -->
+        <!-- ... -->
+
+        <main class="p-6 md:p-8 overflow-y-auto">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold mb-2">Assistentes</h1>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Gerencie e personalize seus assistentes de IA
+                        </p>
+                    </div>
+                    <button id="btnCriarAssistente" class="flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
+    <i data-lucide="plus" class="h-4 w-4"></i>
+    Criar Assistente
+</button>
+
+<script>
+    document.getElementById("btnCriarAssistente").addEventListener("click", function() {
+        window.location.href = "novoassistente.html";
+    });
+</script>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Meus Assistentes -->
+                    <div>
+                        <h2 class="text-lg font-semibold mb-4">Meus Assistentes</h2>
+                        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Assistente 1 -->
+                            <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                                <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                                    <i data-lucide="message-square" class="h-6 w-6"></i>
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Assistente Jurídico</h3>
+                                <p class="mt-2 text-gray-600 dark:text-gray-400">Auxilia em pesquisas e análises jurídicas</p>
+                                <button 
+    class="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600" 
+    onclick="window.location.href='https://notebooklm.google.com/notebook/8de66d21-7869-48b0-8f05-170a0ef16177';">
+    Acessar
+</button>
+
+                            </div>
+
+                            <!-- Assistente 2 -->
+                            <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                                <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                                    <i data-lucide="brain" class="h-6 w-6"></i>
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Analista de Processos</h3>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Análise e classificação de processos trabalhistas</p>
+<button 
+    class="mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800" 
+    onclick="window.location.href='https://notebooklm.google.com/notebook/651b35fe-68c5-47ae-b2f7-9e627c04fd41';">
+    Utilizar Assistente
+</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outros Assistentes -->
+                    <div>
+                        <h2 class="text-lg font-semibold mb-4">Outros Assistentes</h2>
+                        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                                <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                                    <i data-lucide="zap" class="h-6 w-6"></i>
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Assistente de Redação</h3>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Auxilia na redação de documentos jurídicos</p>
+<button 
+    class="mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800" 
+    onclick="window.location.href='https://notebooklm.google.com/notebook/0c17f0c2-4d8f-4349-b12b-2c32f529f444';">
+    Utilizar Assistente
+</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

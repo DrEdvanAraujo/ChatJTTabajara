@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="rgb(249, 250, 251)">
+    <title>Configurações - Chat-JT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+            document.querySelector('meta[name="theme-color"]')
+                .setAttribute("content", "rgb(26, 36, 50)");
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="fixed inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm dark:bg-black/50">
+        <dialog open class="h-[95dvh] w-[90dvw] overflow-hidden rounded-2xl bg-white shadow-2xl outline-none sm:h-[85dvh] xl:w-[1200px] 2xl:h-[75dvh] dark:bg-gray-800">
+            <div class="grid h-full w-full grid-cols-1 grid-rows-[auto,1fr] content-start gap-x-4 overflow-hidden p-4 md:grid-cols-3 md:grid-rows-[auto,1fr] md:p-8">
+                <div class="col-span-1 mb-4 flex items-center justify-between md:col-span-3">
+                    <h2 class="text-xl font-bold dark:text-gray-200">Configurações</h2>
+                    <button class="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <onclick="window.location.href = 'index.html'"
+                            <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="col-span-1 flex flex-col overflow-y-auto whitespace-nowrap max-md:-mx-4 max-md:h-[245px] max-md:border max-md:border-b-2 md:pr-6">
+                    <h3 class="pb-3 pl-3 pt-2 text-[.8rem] text-gray-800 sm:pl-1 dark:text-gray-300">Modelos</h3>
+                    <a href="#" class="group flex h-10 flex-none items-center gap-2 pl-3 pr-2 text-sm text-gray-500 hover:bg-gray-100 md:rounded-xl dark:hover:bg-gray-700">
+                        <div class="mr-auto truncate">gemini-1.5-flash</div>
+                        <div class="rounded-lg bg-black px-2 py-1.5 text-xs font-semibold leading-none text-white">
+                            Ativo
+                        </div>
+                    </a>
+                    <button id="btnConfiguracoes" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    meta-llama/Meta-Llama-3.1-70B-Instruct
+</button>
+
+<script>
+    document.getElementById("btnConfiguracoes").addEventListener("click", function() {
+        window.location.href = "ConfigLhama.html";
+    });
+</script>
+
+                    <h3 class="pl-3 pt-5 text-[.8rem] text-gray-800 sm:pl-1 dark:text-gray-300">Assistentes</h3>
+                    <h4 class="py-2 pl-5 text-[.7rem] text-gray-600 sm:pl-1 dark:text-gray-400">Meus Assistentes</h4>
+                    <h4 class="pl-3 pt-3 text-[.7rem] text-gray-600 sm:pl-1 dark:text-gray-400">Outros Assistentes</h4>
+                </div>
+
+                <div class="col-span-1 w-full overflow-y-auto overflow-x-clip px-1 max-md:pt-4 md:col-span-2 md:row-span-2">
+                    <div class="flex flex-col items-start">
+                        <div class="mb-5 flex flex-col gap-1.5">
+                            <h2 class="text-lg font-semibold md:text-xl dark:text-gray-200">gemini-1.5-flash</h2>
+                            <div class="flex gap-2">
+                                <button class="flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Copiar link direto
+                                </button>
+                                <button onclick="window.location.href = 'index.html'" class="flex items-center gap-2 rounded-lg bg-black px-3 py-1.5 text-sm text-white hover:bg-gray-800">
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 4v16m8-8H4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Novo chat
+</button>
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <h3 class="mb-4 text-lg font-semibold dark:text-gray-200">Prompt de Sistema</h3>
+                            <textarea rows="10" class="w-full resize-none rounded-md border-2 bg-gray-100 p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">Seu nome é Chat-JT. Você é um assistente preciso e confiável da plataforma nacional de IA da Justiça do Trabalho (JT). 
+Você executa atividades textuais e de busca, relacionadas ao trabalho nos Tribunais do Trabalho. 
+Você atende aos servidores e magistrados da Justiça do Trabalho no Brasil.
+
+## Sobre a Plataforma nacional de IA da JT
+
+Envolve a implementação de um ambiente de chat (ia.jt.jus.br/chat) para a colaboração no uso e na construção de soluções de IA na Justiça do Trabalho.
+O ambiente traz o controle do uso da IA para a JT, permitindo a guarda das conversas e a coleta de feedback dos usuários para melhoria contínua das soluções de IA, ajudando a identificar riscos e oportunidades de aplicação da IA generativa na JT.
+Com uma estrutura de chat, a interação com os modelos de inteligência artificial é direta, feita pelo próprio usuário, usando sua própria linguagem.
+Isso permite que o desenvolvimento e aprimoramento de modelos seja baseado na experiência do usuário e no desempenho das soluções, além de possibilitar que os usuários aprendam a obter valor no uso da tecnologia, explorando possibilidades e oportunidades para atendimento de sua demanda diária.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>

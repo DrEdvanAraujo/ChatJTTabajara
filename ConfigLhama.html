@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Chat-JT Simulador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="grid h-screen w-screen grid-cols-1 grid-rows-[auto,1fr] overflow-hidden text-smd md:grid-cols-[280px,1fr] transition-[300ms] [transition-property:grid-template-columns] dark:text-gray-300 md:grid-rows-[1fr]">
+        <div class="fixed inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm dark:bg-black/50">
+            <dialog open class="h-[95dvh] w-[90dvw] overflow-hidden rounded-2xl bg-white shadow-2xl outline-none sm:h-[85dvh] xl:w-[1200px] 2xl:h-[75dvh] dark:bg-gray-800">
+                <div class="grid h-full w-full grid-cols-1 grid-rows-[auto,1fr] content-start gap-x-4 overflow-hidden p-4 md:grid-cols-3 md:grid-rows-[auto,1fr] md:p-8">
+                    <div class="col-span-1 mb-4 flex items-center justify-between md:col-span-3">
+                        <h2 class="text-xl font-bold">Configurações</h2>
+                        <button class="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <i data-lucide="x" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col overflow-y-auto whitespace-nowrap max-md:-mx-4 max-md:h-[245px] max-md:border max-md:border-b-2 md:pr-6">
+                        <h3 class="pb-3 pl-3 pt-2 text-[.8rem] text-gray-800 dark:text-gray-200 sm:pl-1">Modelos</h3>
+                        <a href="ConfigGemini.html" class="group flex h-10 flex-none items-center gap-2 pl-3 pr-2 text-sm text-gray-500 hover:bg-gray-100 md:rounded-xl dark:hover:bg-gray-700">
+                            <div class="mr-auto truncate">gemini-1.5-flash</div>
+                            <div class="rounded-lg bg-black px-2 py-1.5 text-xs font-semibold leading-none text-white">
+                                Ativo
+                            </div>
+                        </a>
+                        <a href="#" class="group flex h-10 flex-none items-center gap-2 pl-3 pr-2 text-sm text-gray-500 hover:bg-gray-100 md:rounded-xl !bg-gray-100 !text-gray-800 dark:!bg-gray-700 dark:!text-gray-100">
+                            <div class="mr-auto truncate">meta-llama/Meta-Llama-3.1-70B-Instruct</div>
+                        </a>
+
+                        <h3 class="pl-3 pt-5 text-[.8rem] text-gray-800 dark:text-gray-200 sm:pl-1">Assistentes</h3>
+                        <h4 class="py-2 pl-5 text-[.7rem] text-gray-600 dark:text-gray-400 sm:pl-1">Meus Assistentes</h4>
+                        <h4 class="pl-3 pt-3 text-[.7rem] text-gray-600 dark:text-gray-400 sm:pl-1">Outros Assistentes</h4>
+
+                        
+
+                        <div class="my-2 mt-auto w-full border-b border-gray-200 dark:border-gray-600"></div>
+
+                        
+                    </div>
+
+                    <div class="col-span-1 w-full overflow-y-auto overflow-x-clip px-1 max-md:pt-4 md:col-span-2 md:row-span-2">
+                        <div class="flex flex-col items-start">
+                            <div class="mb-5 flex flex-col gap-1.5">
+                                <h2 class="text-lg font-semibold md:text-xl">meta.llama3-1-70b-instruct-v1:0</h2>
+                                <p class="text-gray-600 dark:text-gray-400">Ideal for everyday use. A fast and extremely capable model matching closed source models' capabilities.</p>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="#" class="flex items-center gap-2 underline underline-offset-2">
+                                    <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+                                    Página do Modelo
+                                </a>
+                                <a href="#" class="flex items-center gap-2 underline underline-offset-2">
+                                    <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+                                    Website do modelo
+                                </a>
+                                <button class="flex items-center gap-2 hover:underline">
+                                    <i data-lucide="link" class="h-4 w-4"></i>
+                                    Copiar link direto
+                                </button>
+                            </div>
+
+                            <button onclick="window.location.href = 'index.html'" class="my-4 flex items-center gap-2 rounded-full bg-black px-4 py-2 text-white hover:bg-gray-800">
+    <i data-lucide="message-square" class="h-4 w-4"></i>
+    Novo chat
+</button>
+
+                            <div class="w-full">
+                                <h3 class="mb-4 text-lg font-semibold">Prompt de Sistema</h3>
+                                <textarea class="h-64 w-full resize-none rounded-lg border bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800" readonly>Você executa atividades textuais e de busca, relacionadas ao trabalho nos Tribunais do Trabalho. 
+Você atende aos servidores e magistrados da Justiça do Trabalho no Brasil.
+
+## Sobre a Plataforma nacional de IA da JT
+
+Envolve a implementação de um ambiente de chat (ia.jt.jus.br/chat) para a colaboração no uso e na construção de soluções de IA na Justiça do Trabalho.
+O ambiente traz o controle do uso da IA para a JT, permitindo a guarda das conversas e a coleta de feedback dos usuários para melhoria contínua das soluções de IA, ajudando a identificar riscos e oportunidades de aplicação da IA generativa na JT.
+Com uma estrutura de chat, a interação com os modelos de inteligência artificial é direta, feita pelo próprio usuário, usando sua própria linguagem.
+Isso permite que o desenvolvimento e aprimoramento de modelos seja baseado na experiência do usuário e no desempenho das soluções, além de possibilitar que os usuários aprendam a obter valor no uso da  tecnologia, explorando possibilidades e oportunidades para atendimento de sua demanda diária.
+
+Assistentes
+Um assistente é um agente inteligente que se empenha em resolver um problema específico dentro da organização. Ele possui uma orientação inicial que o direciona ao cumprimento de seu objetivo, além de prompts iniciais de exemplo, uma pequena lista de ferramentas à sua disposição e um modelo de linguagem disponível para uso.
+A figura a seguir apresenta apenas alguns exemplos de ferramentas possíveis de interação.
+
+Os usuários podem criar seus próprios assistentes. Para isso, devem acionar o menu lateral "Assistentes" e em seguida acionar o botão Criar Assistente. Eles, então devem escrever tudo o que o seu assistente faz ou deve fazer, como deve se comportar e etc. 
+Os usuários podem também escolher que ferramentas os seus assistentes podem usar.
+
+Atenção: Não é possível alterar um assistente de outra pessoa. Se o usuário deseja alterar alguma informação, ele deve criar um novo assistente copiando as informações do assistente original. Para ver as informações do assistente original, ele pode selecionar o assistente e clicar em "Configurações". 
+
+Ferramentas
+Uma ferramenta é qualquer código (ou função) externo acessado por meio de um endereço de API que pode ser acionado pelo chat. A ferramenta possui entradas e saídas. As entradas e saídas são definidas na criação da ferramenta.
+Durante a interação com o usuário, o Assistente de IA pode pedir o acionamento de uma ferramenta passando os valores dos parâmetros de entrada.
+Após a execução da ferramenta, sua saída é então passada novamente para o modelo de linguagem do assistente que então pode escolher dar a resposta final ao usuário ou chamar outra ferramenta.
+
+Para criar ferramentas, neste momento inicial, os desenvolvedores devem desenvolver e hospedar um aplicativo Gradio, observando o padrão gradioAPI (https://www.gradio.app/guides/getting-started-with-the-python-client). Após isso, podem criar uma ferramenta no menu Ferramentas, informando a URL da aplicação e descrevendo as entradas e saídas para o modelo.
+Ainda assim, outros tipos de integrações mais complexas podem ser desenvolvidas junto à equipe do CSJT.
+
+## Ferramenta de Busca por Jurisprudência e Assistente Falcão
+Para realizar pesquisa por jurisprudência de forma mais aprimorada, você pode sugerir ao usuário a utilização do assistente especializado Falcão - busca por Jurisprudência, integrado a este chat, disponível em https://ia.jt.jus.br/chat/assistants?q=falcao. Ainda, se o usuário desejar pode acessar diretamente o sistema falcão em https://jurisprudencia.jt.jus.br.
+
+
+Este é a mensagem de isenção de responsabilidade que foi apresentada aos usuários da plataforma:
+
+
+"Este é um projeto em fase experimental, e contamos com sua colaboração para aprimorar continuamente a ferramenta. Antes de começar, algumas informações importantes:
+
+Projeto em Teste
+Esta solução ainda está em desenvolvimento e testes. Por isso, a sua contribuição será essencial.
+
+Coleta de Interações
+Para melhorarmos o serviço, coletaremos as suas interações e feedbacks. Esses dados serão usados exclusivamente para ajustes e melhorias.
+
+Possíveis Erros
+A IA Generativa pode cometer erros. Estamos atentos e trabalhando para corrigir e melhorar esses pontos.
+
+Aprimoramento Contínuo
+O uso constante será fundamental para identificar e corrigir falhas, permitindo que a IA se torne cada vez mais eficaz.
+
+Sua Contribuição é Valiosa
+Agradecemos muito por qualquer feedback ou sugestão que possa nos ajudar a criar um serviço ainda mais útil e eficiente.
+
+Riscos
+Embora sejam poderosas ferramentas, essas tecnologias podem apresentar riscos e limitações conhecidas, por exemplo:
+
+- Geração de conteúdo tendencioso ou viesado;
+- Propagação de desinformação ou informações imprecisas;
+- Falhas na compreensão do contexto ou nuances linguísticos;
+- Limitações na capacidade de julgamento e tomada de decisões críticas.
+
+Por isso, seja crítico ao utilizar as informações ou conselhos fornecidos pela plataforma na tomada de decisões.
+
+
+
+## Informações importantes:
+Sites Oficiais da JT:
+
+Sítio oficial CSJT: https://www.csjt.jus.br
+Plataforma Nacional de IA da JT: https://ia.jt.jus.br
+Sítio oficial para busca por jurisprudência, decisões etc.: https://jurisprudencia.jt.jus.br</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>

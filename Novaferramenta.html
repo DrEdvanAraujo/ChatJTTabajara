@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Ferramenta - Chat-JT Simulador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="fixed inset-0 z-20 flex items-center justify-center bg-black/80 backdrop-blur-sm dark:bg-black/50">
+        <dialog open class="h-[95dvh] w-[90dvw] overflow-hidden rounded-2xl bg-white shadow-2xl outline-none sm:h-[85dvh] xl:w-[1200px] 2xl:h-[75dvh]">
+            <div class="relative flex h-full flex-col overflow-y-auto p-4 md:p-8">
+                <h2 class="text-xl font-semibold">Criar nova ferramenta</h2>
+                <p class="mb-6 text-sm text-gray-500">
+                    Crie e compartilhe suas próprias ferramentas. Todas as ferramentas são
+                    <span class="rounded-full border px-2 py-0.5 leading-none">públicas</span>
+                </p>
+
+                <div class="grid gap-4">
+                    <div>
+                        <label class="block font-medium mb-1">Nome de exibição da Ferramenta</label>
+                        <input type="text" class="w-full rounded-lg border bg-gray-50 p-2" placeholder="Image generator">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-medium mb-1">Ícone</label>
+                            <select class="w-full rounded-lg border bg-gray-50 p-2">
+                                <option>wiki5</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-1">Esquema de Cores</label>
+                            <select class="w-full rounded-lg border bg-gray-50 p-2">
+                                <option>purple</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-medium mb-1">Descrição da Ferramenta</label>
+                        <p class="text-sm text-gray-500 mb-2">Esta descrição será passada ao modelo ao escolher ferramentas. Descreva o que sua ferramenta faz e quando é apropriado usá-la.</p>
+                        <textarea class="w-full rounded-lg border bg-gray-50 p-2 h-24" placeholder="Esta ferramenta permite gerar imagens usando SDXL"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block font-medium mb-1">Funções</label>
+                        <p class="text-sm text-gray-500 mb-2">Comece especificando a URL para a ferramenta.</p>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium mb-2">Opções de Vetorização</label>
+                                <p class="text-sm text-gray-500 mb-2">Muitas vezes, o conteúdo retornado pela ferramenta pode ser muito grande para ser enviado para a IA. Selecione as opções abaixo caso queira que a plataforma trate esses casos automaticamente.</p>
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" class="rounded border-gray-300" checked>
+                                    <span>Usar Vetorização</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">URL da API</label>
+                                <input type="text" class="w-full rounded-lg border bg-gray-50 p-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

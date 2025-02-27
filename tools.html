@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas - Chat-JT Simulador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <div class="grid h-screen w-screen grid-cols-1 grid-rows-[auto,1fr] overflow-hidden text-smd md:grid-cols-[280px,1fr] transition-[300ms] [transition-property:grid-template-columns] dark:text-gray-300 md:grid-rows-[1fr]">
+	<!-- Sidebar -->
+        <nav class="grid max-h-screen grid-cols-1 grid-rows-[auto,1fr,auto] overflow-hidden *:w-[280px] max-md:hidden">
+            <div class="sticky top-0 flex flex-none items-center justify-between px-3 py-3.5">
+                <span class="flex items-center rounded-xl text-lg font-semibold">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1011 865" class="mr-1">
+        <!-- SVG path do logo aqui -->
+    </svg>
+    Chat-JT
+</span>
+
+<button onclick="window.location.href = 'index.html'" class="my-4 flex items-center gap-2 rounded-full bg-black px-4 py-2 text-white hover:bg-gray-800">
+    <i data-lucide="message-square" class="h-4 w-4"></i>
+    Novo chat
+</button>
+            </div>
+
+            <div class="scrollbar-custom flex flex-col gap-1 overflow-y-auto rounded-r-xl from-gray-50 px-3 pb-3 pt-2 text-[.9rem] dark:from-gray-800/30">
+                <!-- Lista de conversas anteriores aqui -->
+            </div>
+
+            <div class="mt-0.5 flex flex-col gap-1 rounded-r-xl p-3 text-sm md:bg-gradient-to-l md:from-gray-50 md:dark:from-gray-800/30">
+    <button id="theme-button" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+        <i data-lucide="sun" class="mr-2 h-4 w-4"></i>
+        Tema
+    </button>
+    <button id="btnAssistentes" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Assistentes
+</button>
+
+<script>
+    document.getElementById("btnAssistentes").addEventListener("click", function () {
+        window.location.href = "assistentes.html";
+    });
+</script>
+        
+    <button id="btnFerramentas" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Ferramentas
+    <span class="ml-auto rounded-full border border-purple-300 px-2 py-0.5 text-xs text-purple-500 dark:border-purple-500 dark:text-purple-400">
+        Novo
+    </span>
+</button>
+
+<script>
+    document.getElementById("btnFerramentas").addEventListener("click", function () {
+        window.location.href = "tools.html"; // Redireciona para a página de ferramentas
+    });
+</script>
+
+    
+<button id="btnConfiguracoes" class="flex w-full items-center justify-start rounded-lg px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+    Configurações
+</button>
+
+<script>
+    document.getElementById("btnConfiguracoes").addEventListener("click", function() {
+        window.location.href = "ConfigLhama.html";
+    });
+</script>
+            </div>
+        </nav>
+        <!-- Sidebar (mesmo código da página principal) -->
+        <!-- ... -->
+
+        <main class="p-6 md:p-8 overflow-y-auto">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold mb-2">Ferramentas</h1>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Explore as ferramentas disponíveis para otimizar seu trabalho
+                    </p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Ferramenta 1 -->
+                    <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                        <div class="flex items-center justify-between">
+                            <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                                <i data-lucide="search" class="h-6 w-6"></i>
+                            </div>
+                            <span class="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-600 dark:bg-purple-900 dark:text-purple-300">
+                                Novo
+                            </span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Pesquisa Jurídica</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Busca avançada em documentos e jurisprudência</p>
+                        <button 
+    class="mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600" 
+    onclick="window.location.href='https://notebooklm.google.com/notebook/df424473-1b1b-47e1-a3af-7e8b39f803bf';">
+    Acessar
+</button>
+
+                    </div>
+
+                    <!-- Ferramenta 2 -->
+                    <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                        <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                            <i data-lucide="file-text" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Análise de Documentos</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Extração e análise de informações de documentos jurídicos</p>
+                        <button class="mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-500 cursor-not-allowed" disabled>
+                            Em breve
+                        </button>
+                    </div>
+
+                    <!-- Ferramenta 3 -->
+                    <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                        <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                            <i data-lucide="database" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Base de Conhecimento</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Acesso à base de conhecimento jurídico integrado</p>
+                        <button class="mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-500 cursor-not-allowed dark:border-gray-600" disabled>
+                            Em breve
+                        </button>
+                    </div>
+
+                    <!-- Integração com Sistemas -->
+                    <div class="rounded-lg border p-6 shadow-sm hover:shadow-md transition-shadow dark:border-gray-700">
+                        <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit">
+                            <i data-lucide="code" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Integração com Sistemas</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Conexão com sistemas internos do tribunal</p>
+                        <button class="mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 text-gray-500 cursor-not-allowed dark:border-gray-600" disabled>
+                            Em desenvolvimento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
